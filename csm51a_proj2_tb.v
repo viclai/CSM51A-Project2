@@ -2,6 +2,7 @@
 //////////////////////////////////////////////////////////////////////////////
 // Company: UCLA Henry Samueli School of Engineering and Applied Science
 // Engineers: Victor Lai and Dennis Gahm
+// Student IDs: 404274720 and 704016107
 // 
 // Create Date: 05/08/2015 01:05:18 PM
 // Design Name: 
@@ -23,7 +24,7 @@ module Top;
 reg x3, x2, x1, x0;
 wire a, b, c, d, e, f, g;
 
-csm51a_proj2 test(x3, x2, x1, x0, a, b, c, d, e, f, g);
+display_decoder test(x3, x2, x1, x0, a, b, c, d, e, f, g);
 
 initial begin
     
