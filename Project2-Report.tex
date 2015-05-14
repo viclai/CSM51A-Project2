@@ -58,7 +58,7 @@
 
 \begin{abstract}
 Throughout the first half of this course on digital systems, we have learned 
-to designed combination systems. In this project we built a combinational 
+to design combination systems. In this project we built a combinational 
 circuit of a BCD-to-seven-segment display decoder by going through the process 
 of designing digital systems from the high-level specification to the final 
 implementation.  We defined the encoding scheme of the input and output, 
@@ -78,7 +78,7 @@ respective schematic representation for the function of the circuit.\\
 \begin{equation*}
 \begin{split}
 a & = [ (x_2 x_0)'  (x_1)'  (x_3)'  (x'_2 x'_0)']' \\
-  & = NAND(NAND(x_2, x_0), x_1, x_3, NAND(x'_2, x'_0)) \\
+  & = NAND(NAND(x_2, x_0), x'_1, x'_3, NAND(x'_2, x'_0)) \\
 \end{split}
 \end{equation*}
 \begin{figure}[h!]
@@ -89,7 +89,7 @@ a & = [ (x_2 x_0)'  (x_1)'  (x_3)'  (x'_2 x'_0)']' \\
 \begin{equation*}
 \begin{split}
 b & = [ (x_3)' (x_1 x_0)' (x'_1 x'_0)' x_2 ]' \\
-  & = NAND(x_3, NAND(x_1, x_0), NAND(x'_1, x'_0), x'_2) \\
+  & = NAND(x'_3, NAND(x_1, x_0), NAND(x'_1, x'_0), x_2) \\
 \end{split}
 \end{equation*}
 \clearpage
@@ -102,7 +102,7 @@ b & = [ (x_3)' (x_1 x_0)' (x'_1 x'_0)' x_2 ]' \\
 \begin{equation*}
 \begin{split}
 c & = [ (x_3)' x_1 (x_0)' (x_2)' ]' \\ 
-  & = NAND(x_3, x'_1, x_0, x_2) \\
+  & = NAND(x'_3, x_1, x'_0, x'_2) \\
 \end{split}
 \end{equation*}
 \begin{figure}[h!]
@@ -114,7 +114,7 @@ c & = [ (x_3)' x_1 (x_0)' (x_2)' ]' \\
 \begin{equation*}
 \begin{split}
 d & = [ (x_2 x'_1 x_0)' (x'_2 x'_0)' (x_3)' (x_1 x'_0)' (x'_2 x_1)' ]' \\ 
-  & = NAND(NAND(x_2, x'_1, x_0), NAND(x'_2, x'_0), x_3, NAND(x_1, x'_0), 
+  & = NAND(NAND(x_2, x'_1, x_0), NAND(x'_2, x'_0), x'_3, NAND(x_1, x'_0), 
       NAND(x'_2, x_1)) \\
 \end{split}
 \end{equation*}
@@ -141,7 +141,7 @@ e & = [ (x'_2 x'_0)' (x_1 x'_0)' ]' \\
 \begin{equation*}
 \begin{split}
 f & = [ (x_3)' (x_2 x'_0)' (x_2 x'_1)' (x'_1 x'_0)' ]' \\ 
-  & = NAND(x_3, NAND(x_2, x'_0), NAND(x_2, x'_1), NAND(x'_1, x'_0)) \\
+  & = NAND(x'_3, NAND(x_2, x'_0), NAND(x_2, x'_1), NAND(x'_1, x'_0)) \\
 \end{split}
 \end{equation*}
 \begin{figure}[h!]
@@ -155,7 +155,7 @@ f & = [ (x_3)' (x_2 x'_0)' (x_2 x'_1)' (x'_1 x'_0)' ]' \\
 \begin{equation*}
 \begin{split}
 g & = [ (x_2 x'_1)' (x_3)' (x'_2 x_1)' (x_2 x'_0)' ]' \\ 
-  & = NAND(NAND(x_2, x'_1), x_3, NAND(x'_2, x_1), NAND(x_2, x'_0)) \\
+  & = NAND(NAND(x_2, x'_1), x'_3, NAND(x'_2, x_1), NAND(x_2, x'_0)) \\
 \end{split}
 \end{equation*}
 \begin{figure}[h!]
@@ -164,7 +164,7 @@ g & = [ (x_2 x'_1)' (x_3)' (x'_2 x_1)' (x_2 x'_0)' ]' \\
 \end{figure}
 
 The same expressions can also be found in the Appendix. The Appendix gives a 
-step-by-step procedure to those expressions.
+step-by-step procedure to get those expressions.
  
 %----------------------------------------------------------------------------
 %	VERILOG CODE
@@ -317,7 +317,7 @@ precisely when \textbf{x} is given the value of 9. \\
 \\
 The top four green lines represent the four input variables, while the 
 remaining seven represent the output variables. A green line on the bottom 
-indicates a logic vale of 0, while a green line higher up indicates a logic 
+indicates a logic value of 0, while a green line higher up indicates a logic 
 value of 1.  Based on that interpretation, we were able to see that the output 
 values are correct for each input combination.\\
 \\
@@ -393,7 +393,7 @@ Throughout the process of completing this project, we learned many things
 ranging from applying concepts we learned in class to using new software.\\
 \\
 In this project, we learned how to apply the concepts we learned in class to a 
-real world application. We learned that the mechanism of displaying digits on 
+real-world application. We learned that the mechanism of displaying digits on 
 an LED basically just comes from the idea that switching on and off takes
 logic values.  \\
 \\
@@ -609,8 +609,8 @@ implicants (including the essential ones).\\
 
 \pagebreak
 
-From our work, we found that that every minimal sum of products is unique 
-except that of \textit{g}.
+From our work, we found that every minimal sum of products is unique except 
+that of \textit{g}.
 
 
 \subsection{Transformation Procedure}
