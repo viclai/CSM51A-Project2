@@ -1,6 +1,6 @@
 # Synopsis 
 
-LED Circuit is a course-related project assigned in a digital systems <a href="http://www.registrar.ucla.edu/schedule/subdet.aspx?srs=187154200&term=15S&session=" target="_blank" title="COM SCI M51A">class</a> at UCLA. A BCD-to-seven-segment display decoder, which is used extensively to drive LED-based display devices, is built as a circuit using Verilog. 
+LED Circuit is a course-related project assigned in a digital systems <a href="http://www.bruinwalk.com/professors/yutao-he/com-sci-m51a/" target="_blank" title="COM SCI M51A">class</a> at UCLA. A BCD-to-seven-segment display decoder, which is used extensively to drive LED-based display devices, is built as a circuit using Verilog. 
 
 # Development 
 
